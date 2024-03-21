@@ -5,12 +5,31 @@ const {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    // your paths
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx, js, jsx}",
   ],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: '2rem'
+    },
     extend: {
+      colors: {
+        'primary': {
+          DEFAULT: "#692BFC",
+          light: "#D8D3FF",
+          "extra-light": "#F3F2FF",
+          dark: "#40139F",
+          "extra-dark": "#25096C"
+        },
+        'dark': "#111111",
+        'darkLight': "#333333",
+        'light': "#FEFFFF",
+        'gray': "#687387",
+        'info': "#069AF1",
+        'error': "#F04438",
+        'warning': "#FC9D1D",
+      },
       animation: {
         aurora: "aurora 60s linear infinite",
       },

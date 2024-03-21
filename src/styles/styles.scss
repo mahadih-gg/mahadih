@@ -1,0 +1,55 @@
+// ============== Hero section styles =========== //
+
+@font-face {
+  font-family: 'Gerhaus';
+  src: url("../assets/font/Gerhaus.ttf"),
+}
+
+.hero-name {
+  font-family: "Gerhaus";
+  @apply text-3xl md:text-9xl font-bold text-primary-extra-light text-center tracking-wider;
+}
+
+.hero {
+
+  @apply h-screen;
+
+  background: #111111;
+  background: linear-gradient(150deg, #333333 0%, #111111 50%);
+}
+
+
+// ========= scroll down animation ======== //
+.scroll-down span {
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-right: 2px solid #F3F2FF;
+  border-bottom: 2px solid #F3F2FF;
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: scrollDown 3s infinite;
+}
+
+.scroll-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
