@@ -17,8 +17,8 @@ module.exports = {
       colors: {
         'primary': {
           DEFAULT: "#692BFC",
-          light: "#D8D3FF",
-          "extra-light": "#F3F2FF",
+          light: "#BAAFFF",
+          "extra-light": "#D8D3FF",
           dark: "#40139F",
           "extra-dark": "#25096C"
         },
@@ -29,6 +29,9 @@ module.exports = {
         'info': "#069AF1",
         'error': "#F04438",
         'warning': "#FC9D1D",
+      },
+      fontSize: {
+        name: "clamp(4rem, 5vw, 8rem)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
