@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "@/styles/globals.scss";
 import "@/styles/styles.scss";
-import { TracingBeam } from "@/components/ui/tracing-beam";
+import Navbar from "@/components/globals/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  weight: ['300', '400', '500', '600', '700', '800',],
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "Mahadi Hasan.",
@@ -19,9 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <TracingBeam> */}
+        <header className="relative">
+          <Navbar />
+        </header>
         {children}
-        {/* </TracingBeam> */}
+
+        <h1 className="hero-name py-96"> Under Construction</h1>
+        <h1 className="hero-name py-96"> Under Construction</h1>
+        <h1 className="hero-name py-96"> Under Construction</h1>
+
       </body>
     </html>
   );

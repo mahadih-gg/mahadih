@@ -13,6 +13,14 @@ module.exports = {
       center: true,
       padding: '2rem'
     },
+    screens: {
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         'primary': {
@@ -29,9 +37,6 @@ module.exports = {
         'info': "#069AF1",
         'error': "#F04438",
         'warning': "#FC9D1D",
-      },
-      fontSize: {
-        name: "clamp(4rem, 5vw, 8rem)",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
