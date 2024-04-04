@@ -22,6 +22,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      padding: {
+        'section': '4rem 0',
+      },
       colors: {
         'primary': {
           DEFAULT: "#692BFC",

@@ -4,7 +4,8 @@ import "@/styles/globals.scss";
 import "@/styles/styles.scss";
 import Navbar from "@/components/globals/Navbar";
 
-const inter = Poppins({
+
+const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800',],
   subsets: ["latin"]
 });
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${poppins.className}`}>
         <header className="relative">
           <Navbar />
         </header>

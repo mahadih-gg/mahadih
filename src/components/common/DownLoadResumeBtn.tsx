@@ -1,5 +1,5 @@
 import React from 'react';
-import { HoverBorderGradient } from './hover-border-gradient';
+import { HoverBorderGradient } from '../ui/hover-border-gradient';
 
 const DownLoadResumeBtn = () => {
   return (

@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import DownLoadResumeBtn from "./DownLoadResumeBtn";
+import DownLoadResumeBtn from "../common/DownLoadResumeBtn";
 import BottomGradient from "./BottomGradient";
 
 export const FloatingNav = ({

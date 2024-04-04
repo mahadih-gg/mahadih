@@ -5,7 +5,7 @@ import { HoverBorderGradient } from '../ui/hover-border-gradient';
 import BottomGradient from '../ui/BottomGradient';
 import { FloatingNav } from '../ui/floating-navbar';
 import { navItems } from '@/data/navbar';
-import DownLoadResumeBtn from '../ui/DownLoadResumeBtn';
+import DownLoadResumeBtn from '../common/DownLoadResumeBtn';
 
 const Navbar = () => {
   return (

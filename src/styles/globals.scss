@@ -2,10 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-// =============== Buttons ================ //
 
+@font-face {
+  font-family: 'theboldfont';
+  src: url("../assets/font/theboldfont.ttf"),
+}
+
+// =============== Custom ================ //
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+
+// =============== Buttons ================ //
 .btn {
-  @apply block px-4 py-2;
+  @extend .flex-center;
+  @apply gap-3 px-4 py-2;
 }
 
 .btn-primary {}
+
+
+// =============== Section ================ //
+.section_container {
+  @apply container p-section;
+
+  .section__heading {
+    font-family: "theboldfont";
+    @apply text-9xl text-transparent font-bold tracking-wider;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(216, 211, 255, 0.145);
+  }
+
+  .section__content {
+    @apply relative -mt-10;
+  }
+}
+
+.glass {
+  background: rgba(105, 43, 252, 0.015);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all ease 1s;
+
+  &:hover {
+    background: rgba(105, 43, 252, 0.035);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.30);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: all ease 1s;
+  }
+}
