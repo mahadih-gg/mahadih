@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #D8D3FF;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  // background-color: #692BFC;
+  // outline: 1px solid slategrey;
+
+  border-radius: 50px;
+
+  background: #d8d3ff;
+  background: -moz-linear-gradient(180deg, #d8d3ff 0%, #692bfc 45%, #25096c 100%);
+  background: -webkit-linear-gradient(180deg, #d8d3ff 0%, #692bfc 45%, #25096c 100%);
+  background: linear-gradient(180deg, #d8d3ff 0%, #692bfc 45%, #25096c 100%);
+}
 
 @font-face {
   font-family: 'theboldfont';
@@ -13,6 +37,12 @@
   @apply flex items-center justify-center;
 }
 
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 // =============== Buttons ================ //
 .btn {
@@ -35,7 +65,7 @@
   }
 
   .section__content {
-    @apply relative -mt-10;
+    @apply relative;
   }
 }
 
@@ -46,13 +76,13 @@
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: all ease 1s;
+  transition: all ease 0.4s;
 
   &:hover {
     background: rgba(105, 43, 252, 0.035);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.30);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    transition: all ease 1s;
+    transition: all ease 0.4s;
   }
 }

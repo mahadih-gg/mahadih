@@ -29,8 +29,6 @@ export default function RootLayout({
         {children}
 
         <h1 className="hero-name py-96"> Under Construction</h1>
-        <h1 className="hero-name py-96"> Under Construction</h1>
-        <h1 className="hero-name py-96"> Under Construction</h1>
 
       </body>
     </html>
