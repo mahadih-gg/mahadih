@@ -22,6 +22,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      fontFamily: {
+        play: ["Josefin Sans", "sans-serif"],
+      },
       padding: {
         'section': '4rem 0',
       },

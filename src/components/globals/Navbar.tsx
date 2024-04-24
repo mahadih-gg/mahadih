@@ -15,7 +15,7 @@ const Navbar = () => {
           {
             navItems.map((item, i) => {
               return (
-                <li key={i}><a href={item.link} className="group/btn">{item.name} <BottomGradient /></a></li>
+                <li key={i}><a href={item.link} className="group/btn font-extralight">{item.name} <BottomGradient /></a></li>
               )
             })
           }

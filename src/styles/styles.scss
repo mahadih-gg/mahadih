@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.font-Josefin {
+  font-family: "Josefin Sans", sans-serif;
+}
+
 // ============== Navbar styles =========== //
 .navbar {
   @apply absolute w-full h-20 z-50;
@@ -17,15 +23,6 @@
 }
 
 // ============== Hero section styles =========== //
-@font-face {
-  font-family: 'Gerhaus';
-  src: url("../assets/font/Gerhaus.ttf"),
-}
-
-.hero-name {
-  font-family: "Gerhaus";
-  @apply text-4xl xs:text-5xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-primary-extra-light text-center tracking-wider;
-}
 
 .hero {
   @apply h-screen w-full overflow-hidden;
@@ -82,4 +79,21 @@
   100% {
     opacity: 0;
   }
+}
+
+
+// ========= Neon Text ======== //
+.neon-primary {
+  @apply text-primary-extra-light;
+  text-shadow: rgba(106, 43, 252, 0.9) 0px 0px 39px;
+}
+
+.neon-primary-light {
+  @apply text-primary-extra-light/70;
+  text-shadow: rgba(106, 43, 252, 0.6) 0px 0px 39px;
+}
+
+.neon-secondary-light {
+  @apply text-gray;
+  text-shadow: rgba(106, 43, 252, 0.6) 0px 0px 39px;
 }

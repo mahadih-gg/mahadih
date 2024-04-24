@@ -27,9 +27,14 @@ html {
   background: linear-gradient(180deg, #d8d3ff 0%, #692bfc 45%, #25096c 100%);
 }
 
+
 @font-face {
   font-family: 'theboldfont';
   src: url("../assets/font/theboldfont.ttf"),
+}
+
+.font-theboldfont {
+  font-family: "theboldfont";
 }
 
 // =============== Custom ================ //
@@ -89,4 +94,20 @@ html {
     -webkit-backdrop-filter: blur(6px);
     transition: all ease 0.4s;
   }
+}
+
+
+@font-face {
+  font-family: 'Gerhaus';
+  src: url("../assets/font/Gerhaus.ttf"),
+}
+
+.font-Gerhaus {
+  font-family: "Gerhaus";
+}
+
+.hero-name {
+  font-family: "Gerhaus";
+  font-style: normal;
+  @apply text-4xl xs:text-5xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-primary-extra-light text-center tracking-wider;
 }

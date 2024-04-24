@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section className="bg-darkLight">
+    <section id="about" className="bg-darkLight">
       <div className="bg-gradient-to-r from-transparent via-neutral-300/40 dark:via-neutral-700 to-transparent h-px w-full" />
 
       <div className="section_container">

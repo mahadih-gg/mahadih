@@ -395,7 +395,7 @@ export function GlobeWorld() {
   ];
 
   return (
-    <div className="relative w-full h-auto flex-center bg-dark ">
+    <div className="relative w-full h-auto flex-center bg-transparent ">
       <div className="w-full mx-auto relative overflow-hidden h-full md:h-[40rem] px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-80 bg-gradient-to-b pointer-events-none select-none from-transparent to-dark z-40" />
         <div className="absolute-center w-full h-72 md:h-full z-10">
