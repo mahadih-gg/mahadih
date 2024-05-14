@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <AboutSection />
-      <SkillSection />
+      {/* <SkillSection /> */}
       <ContactSection />
     </main>
   );

@@ -27,16 +27,16 @@ const contactButtons: ContactButtonType[] = [
     link: "tel:+8801856878150"
   },
   {
-    label: "Gmail",
-    icon: <SiGmail className="h-4 w-4" />,
-    extra: "mahadih.dev@gmail.com",
-    link: "mailto:mahadih.dev@gmail.com"
-  },
-  {
     label: "WhatsApp",
     icon: <BsWhatsapp className="h-4 w-4 " />,
     extra: "+8801856878150",
     link: "https://wa.me/+8801856878150"
+  },
+  {
+    label: "Gmail",
+    icon: <SiGmail className="h-4 w-4" />,
+    extra: "mahadih.dev@gmail.com",
+    link: "mailto:mahadih.dev@gmail.com"
   },
   {
     label: "LinkedIn",
@@ -91,7 +91,7 @@ export function ContactForm() {
 
         <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
-        <div className="grid gap-4">
+        <div className="grid  grid-cols-2 sm:grid-cols-3 gap-4">
           {
             contactButtons.map((buttonItem: ContactButtonType, i) => {
               return (
@@ -107,7 +107,7 @@ export function ContactForm() {
                       {buttonItem?.label}
                     </span>
                   </span>
-                  <span className="font-extralight text-gray text-sm">{buttonItem?.extra}</span>
+                  {/* <span className="font-extralight text-gray text-sm">{buttonItem?.extra}</span> */}
                   <BottomGradient />
                 </a>
               )

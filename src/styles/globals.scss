@@ -68,7 +68,7 @@ html {
 
   .section__heading {
     font-family: "theboldfont";
-    @apply text-9xl text-transparent font-bold tracking-wider;
+    @apply text-5xl sm:text-7xl md:text-8xl xl:text-9xl text-transparent font-bold tracking-wider;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgba(216, 211, 255, 0.145);
   }
