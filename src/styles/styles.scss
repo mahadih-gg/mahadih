@@ -4,24 +4,6 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-// ============== Navbar styles =========== //
-.navbar {
-  @apply absolute w-full h-20 z-50;
-
-  background: rgba(17, 17, 17, 0.05);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.navbar__items {
-  @apply container h-full flex justify-end items-center gap-5;
-
-  li>a {
-    @apply relative block text-light hover:text-primary-light font-light tracking-wider py-2 transition duration-300;
-  }
-}
-
 // ============== Hero section styles =========== //
 
 .hero {
@@ -97,3 +79,56 @@
   @apply text-gray;
   text-shadow: rgba(106, 43, 252, 0.6) 0px 0px 39px;
 }
+
+// ======== Menu Burger style start ======== //
+
+.menu-burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: #D8D3FF;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.menu-burger-opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.menu-burger-opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.menu-burger-opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+// ======== Menu Burger style end ======== //

@@ -111,3 +111,7 @@ html {
   font-style: normal;
   @apply text-4xl xs:text-5xl sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-primary-extra-light text-center tracking-wider;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

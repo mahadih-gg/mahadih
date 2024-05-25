@@ -1,0 +1,64 @@
+// ============== Navbar styles =========== //
+.navbar {
+  @apply absolute w-full h-20 z-50;
+
+  background: rgba(17, 17, 17, 0.05);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar-mobile {
+  @apply absolute w-full h-20 z-50;
+  z-index: 1000;
+}
+
+.navbar__items {
+  @apply h-full flex justify-end items-center gap-5;
+
+  li>a {
+    @apply relative block text-light hover:text-primary-light font-light tracking-wider transition duration-300;
+  }
+}
+
+.nav-mobile {
+  .navbar__items_mobile {
+    @apply hidden;
+  }
+
+}
+
+.nav-mobile:before {
+
+  content: '';
+  @apply block fixed top-0 left-0 w-screen h-screen py-3 pointer-events-none;
+
+  background: rgba(0, 0, 0, 0.9);
+  filter: blur(2);
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+.menu-mobile.active {
+
+  @apply fixed top-0 left-0;
+
+  .nav-mobile:before {
+    visibility: visible;
+    clip-path: circle(100%);
+  }
+
+  .nav-mobile {
+    @apply fixed w-full h-full left-0 top-0;
+  }
+
+  .navbar__items_mobile {
+    @extend .navbar__items;
+    @apply py-28 px-10 flex flex-col justify-start items-start gap-10 z-40;
+
+    li>a {
+      @apply text-2xl;
+    }
+  }
+}

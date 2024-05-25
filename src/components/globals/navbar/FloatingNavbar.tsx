@@ -8,19 +8,19 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/utils/cn";
-import Link from "next/link";
-import DownLoadResumeBtn from "../common/DownLoadResumeBtn";
-import BottomGradient from "./BottomGradient";
+import DownLoadResumeBtn from "@/components/common/DownLoadResumeBtn";
+import BottomGradient from "@/components/ui/BottomGradient";
+import Image from "next/image";
+import { navItems } from "@/data/navbar";
+import MobileMenu from "./MobileMenu";
 
-export const FloatingNav = ({
-  navItems,
+const FloatingNavbar = ({
   className,
+  isOpen,
+  setIsOpen
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  isOpen: boolean,
+  setIsOpen: any
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
@@ -32,7 +32,7 @@ export const FloatingNav = ({
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
-      if (scrollYProgress.get() < 0.05) {
+      if (scrollYProgress.get() < 0.1) {
         setVisible(false);
       } else {
         if (direction < 0) {
@@ -63,20 +63,37 @@ export const FloatingNav = ({
           className
         )}
       >
-        <ul className="navbar__items pr-2 pl-8 py-2">
+        <div className="container py-3 hidden md:block">
+          <ul className="navbar__items">
+            {
+              navItems.map((item, i) => {
+                return (
+                  <li key={i}><a href={item.link} className="group/btn font-extralight">{item.name} <BottomGradient /></a></li>
+                )
+              })
+            }
+            <li>
+              <DownLoadResumeBtn />
+            </li>
+          </ul>
+        </div>
+
+        <div className={`container w-screen py-3 flex md:hidden justify-between items-center`}>
+          <a href="#">
+            <Image src="/assets/images/mahadi-logo.png" width={46} height={20} alt="Mahadi's Logo" />
+          </a>
+
+          <span className="uppercase text-light text-xl leading-relaxed">Mahadi Hasan</span>
           {
-            navItems.map((item, i) => {
-              return (
-                <li key={i}><a href={item.link} className="group/btn">{item.name} <BottomGradient /></a></li>
-              )
-            })
+            visible &&
+            <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
           }
-          <li>
-            <DownLoadResumeBtn />
-          </li>
-        </ul>
+        </div>
 
       </motion.div>
     </AnimatePresence>
   );
 };
+
+
+export default FloatingNavbar
